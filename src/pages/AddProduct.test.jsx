@@ -61,7 +61,7 @@ describe("AddProduct page", () => {
     });
 
     expect(mockFetch).toHaveBeenCalledWith(
-      "http://localhost:3000/products",
+      "https://jimjam-store-api.onrender.com/products",
       expect.objectContaining({
         method: "POST",
         headers: { "Content-Type": "application/json" },

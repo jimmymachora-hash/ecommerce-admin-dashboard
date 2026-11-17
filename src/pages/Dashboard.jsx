@@ -13,7 +13,7 @@ function Dashboard() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch(fetch("https://jimjam-store-api.onrender.com/products"))
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load products");

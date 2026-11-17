@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, PlusCircle } from "lucide-react";
 
+const API_URL = "https://jimjam-store-api.onrender.com/products";
+
 function Products() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch(API_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -17,7 +20,7 @@ function Products() {
         return response.json();
       })
       .then((data) => setProducts(data))
-      .catch((error) => console.error(error))
+      .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
 
@@ -48,6 +51,8 @@ function Products() {
           onChange={(event) => setSearch(event.target.value)}
         />
       </div>
+
+      {error && <p className="error-message">{error}</p>}
 
       {loading ? (
         <p>Loading products...</p>

@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = "https://jimjam-store-api.onrender.com/products";
+
 function AddProduct() {
   const navigate = useNavigate();
 
@@ -30,7 +32,7 @@ function AddProduct() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/products", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

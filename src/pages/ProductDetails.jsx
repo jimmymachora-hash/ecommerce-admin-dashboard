@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+const API_URL = "https://jimjam-store-api.onrender.com/products";
+
 function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,7 +13,7 @@ function ProductDetails() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`${API_URL}/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Product not found");
@@ -31,10 +33,9 @@ function ProductDetails() {
     if (!confirmed) return;
 
     try {
-      const response = await fetch(
-        `http://localhost:3000/products/${id}`,
-        { method: "DELETE" }
-      );
+      const response = await fetch(`${API_URL}/${id}`, {
+        method: "DELETE",
+      });
 
       if (!response.ok) {
         throw new Error("Failed to delete product");

@@ -72,7 +72,7 @@ describe("EditProduct page", () => {
     });
 
     expect(fetch).toHaveBeenLastCalledWith(
-      "http://localhost:3000/products/1",
+      "https://jimjam-store-api.onrender.com/products/1",
       expect.objectContaining({
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
