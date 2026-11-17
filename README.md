@@ -1,9 +1,9 @@
 
-# JimJam Store - E-commerce Admin Dashboard
+ JimJam Store - E-commerce Admin Dashboard
 
 A responsive React application for managing an online store. The dashboard allows administrators to view products, add new products, edit existing products, search products, and delete products.
 
-## Features
+\ Features
 
 - Dashboard with dynamic product statistics.
 - View all available products.
@@ -15,7 +15,7 @@ A responsive React application for managing an online store. The dashboard allow
 - Responsive user interface.
 - Automated component and functionality tests.
 
-## Technologies Used
+ Technologies Used
 
 - React
 - Vite
@@ -26,10 +26,9 @@ A responsive React application for managing an online store. The dashboard allow
 - JSON Server
 - Vitest
 - React Testing Library
+  Project Structure
 
-## Project Structure
-
-```text
+text
 src/
 ├── components/
 │   ├── Sidebar.jsx
@@ -47,53 +46,53 @@ src/
 └── index.css
 
 db.json
-```
 
-## Installation
+
+ Installation
 
 Clone the repository:
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
+bash
+git clone https://github.com/jimmymachora-hash/ecommerce-admin-dashboard.git
+
 
 Navigate into the project:
 
-```bash
+bash
 cd ecommerce-admin-dashboard
-```
+
 
 Install dependencies:
 
-```bash
+bash
 npm install
-```
 
-## Running the Application
+
+ Running the Application
 
 Start the JSON Server in one terminal:
 
-```bash
+bash
 npx json-server db.json --port 3000
-```
+
 
 Start the React development server in another terminal:
 
-```bash
+bash
 npm run dev
-```
+
 
 Open the local URL provided by Vite in your browser.
 
-## API Endpoint
+ API Endpoint
 
 The application uses JSON Server as a simulated backend.
 
 Products endpoint:
 
-```text
+text
 http://localhost:3000/products
-```
+
 
 Supported operations:
 
@@ -102,32 +101,32 @@ Supported operations:
 - PATCH - Update a product.
 - DELETE - Remove a product.
 
-## Testing
+ Testing
 
 Run automated tests:
 
-```bash
+bash
 npm test
-```
+
 
 Run tests once without watch mode:
 
-```bash
+bash
 npm test -- --run
-```
 
-## Production Build
 
-```bash
+ Production Build
+
+bash
 npm run build
-```
+
 
 ## Code Quality
 
-```bash
+bash
 npm run lint
-```
+
 
 ## Author
 
-**Jonathan Jimmy Machora (JIMJAM)**
+Jonathan Jimmy Machora (JIMJAM)
